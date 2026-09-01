@@ -1,1 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zion Phones | Kapsabet</title>
+  <style>
+    :root {
+      --primary: #0d6efd;
+      --primary-dark: #0a58ca;
+      --secondary: #003366;
+      --light-bg: #f4f8fb;
+      --text-dark: #212529;
+      --text-muted: #6c757d;
+      --white: #ffffff;
+      --whatsapp-green: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    header {
+      background-color: var(--secondary);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--white);
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: #6ea8fe;
+    }
+
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin-left: 1.2rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #6ea8fe;
+    }
+
+    /* Hero Banner */
+    .hero {
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: var(--white);
+      text-align: center;
+      padding: 3.5rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-whatsapp {
+      background-color: var(--whatsapp-green);
+      color: var(--white);
+      margin-left: 0.5rem;
+    }
+
+    /* Layout Sections */
+    section {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      text-align: center;
+      color: var(--secondary);
+      margin-bottom: 1.8rem;
+      font-size: 1.8rem;
+    }
+
+    /* Product Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      border-top: 4px solid var(--primary);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h3 {
+      color: var(--secondary);
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .card .tag {
+      background-color: #e7f1ff;
+      color: var(--primary);
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      font-weight: bold;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    /* Info Boxes */
+    .info-box {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+
+    .info-box h3 {
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--secondary);
+      color: var(--white);
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      nav a {
+        margin: 0 0.5rem;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+      .btn {
+        display: block;
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">Zion <span>Phones</span></a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Welcome to Zion Phones</h1>
+    <p>Flexible <strong>Lipa Mdogo Mdogo</strong> installment plans, Cash deals, chargers, cables & all phone accessories in Kapsabet.</p>
+    <div>
+      <a href="tel:0704263651" class="btn btn-primary">Call Us Today</a>
+      <a href="https://wa.me/254704263651" class="btn btn-whatsapp" target="_blank">Chat on WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="products">
+    <h2 class="section-title">Our Stock & Services</h2>
+    <div class="grid">
+      
+      <div class="card">
+        <div>
+          <h3>Lipa Mdogo Mdogo</h3>
+          <span class="tag">Flexible Installments</span>
+          <p>Get your smartphone today with easy daily or weekly payment options.</p>
+        </div>
+        <a href="https://wa.me/254704263651?text=Hello%20Zion%20Phones,%20I%20am%20inquiring%20about%20Lipa%20Mdogo%20Mdogo%20phones" class="btn btn-primary" target="_blank">Inquire Plan</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Cash Phones</h3>
+          <span class="tag">Best Cash Prices</span>
+          <p>Brand new smartphones available at unbeatable cash prices with full warranty.</p>
+        </div>
+        <a href="https://wa.me/254704263651?text=Hello%20Zion%20Phones,%20I%20am%20inquiring%20about%20Cash%20phones" class="btn btn-primary" target="_blank">View Models</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Chargers & Cables</h3>
+          <span class="tag">Original Quality</span>
+          <p>Durable Type-C, Lightning, Micro-USB cables and fast-charging adapters.</p>
+        </div>
+        <a href="https://wa.me/254704263651?text=Hello%20Zion%20Phones,%20I%20need%20a%20charger/cable" class="btn btn-primary" target="_blank">Order Cable/Charger</a>
+      </div>
+
+      <div class="card">
+        <div>
+          <h3>Phone Accessories</h3>
+          <span class="tag">Complete Gear</span>
+          <p>Screen protectors, protective covers, earphones, power banks, and memory cards.</p>
+        </div>
+        <a href="https://wa.me/254704263651?text=Hello%20Zion%20Phones,%20I%20am%20inquiring%20about%20accessories" class="btn btn-primary" target="_blank">Order Accessories</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Zion Phones</h2>
+    <div class="info-box">
+      <h3>Your Trusted Mobile Partner in Kapsabet</h3>
+      <p>At <strong>Zion Phones</strong>, we specialize in making quality mobile technology accessible. Whether you want to buy cash, upgrade via flexible Lipa Mdogo Mdogo payment plans, or grab essential phone accessories, we have you covered with genuine products and quick service.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Visit or Contact Zion Phones</h2>
+    <div class="grid">
+      
+      <div class="info-box">
+        <h3>Store Location</h3>
+        <p><strong>Town:</strong> Kapsabet</p>
+        <p><strong>Landmark:</strong> Next to Mawa Wholesalers</p>
+        <p>Stop by our store to check out models in person or pick up accessories.</p>
+      </div>
+
+      <div class="info-box">
+        <h3>Get In Touch</h3>
+        <p><strong>Call / SMS:</strong> <a href="tel:0704263651" style="color: var(--primary); font-weight: bold;">0704263651</a></p>
+        <p><strong>WhatsApp:</strong> Direct inquiries welcome</p>
+        <br>
+        <a href="https://wa.me/254704263651" class="btn btn-whatsapp" target="_blank">WhatsApp 0704263651</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Zion Phones. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
 
